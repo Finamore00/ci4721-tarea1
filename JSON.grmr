@@ -19,8 +19,7 @@
 
 <Key> ::= tkString
 
-<Value> ::= tkInteger
-        |   tkFloatingNum
+<Value> ::= tkNumber
         |   tkString
         |   tkNull
         |   <Boolean>
