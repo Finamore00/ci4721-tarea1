@@ -1,0 +1,31 @@
+<JSON> ::= <Object>
+       |   <Array>
+
+<Object> ::= tkOpCurlyBrace <KeyValueList> tkClCurlyBrace
+
+<KeyValueList> ::= <Key>tkColon <Value><KeyValueListCont>
+               | lambda
+
+<KeyValueListCont> ::= tkComma <KeyValueList>
+                   |   lambda
+
+<Array> ::= tkOpBracket <ValueList> tkClBracket
+
+<ValueList> ::= <Value><ValueListCont>
+            |   lambda
+
+<ValueListCont> ::= tkComma <ValueList>
+                |   lambda
+
+<Key> ::= tkString
+
+<Value> ::= tkInteger
+        |   tkFloatingNum
+        |   tkString
+        |   tkNull
+        |   <Boolean>
+        |   <Object>
+        |   <Array>
+
+<Boolean> ::= tkTrue
+          |   tkFalse
